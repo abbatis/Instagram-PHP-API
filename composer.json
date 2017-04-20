@@ -1,9 +1,9 @@
 {
-	"name": "cosenary/instagram",
+	"name": "m3pasivalkeila/instagram",
 	"type": "library",
 	"description": "An easy-to-use PHP Class for accessing Instagram's API.",
 	"keywords": ["instagram", "api"],
-	"homepage": "https://github.com/cosenary/Instagram-PHP-API",
+	"homepage": "https://github.com/m3pasivalkeila/Instagram-PHP-API",
 	"license": "BSD",
 	"authors": [
 		{
