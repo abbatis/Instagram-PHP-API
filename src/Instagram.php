@@ -141,13 +141,12 @@ class Instagram
     public function searchUser($name, $limit = 0)
     {
         $params = array();
-
-        $params['q'] = $name;
+      //  $params['q'] = $name;
         if ($limit > 0) {
             $params['count'] = $limit;
         }
 
-        return $this->_makeCall('users/search', true, $params);
+        return $this->_makeCall('users/self/media/recent', true, $params);
     }
 
     /**
@@ -601,7 +600,8 @@ class Instagram
         if ($this->_signedheader) {
             $apiCall .= (strstr($apiCall, '?') ? '&' : '?') . 'sig=' . $this->_signHeader($function, $authMethod, $params);
         }
-
+        
+        
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $apiCall);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headerData);
